@@ -62,7 +62,7 @@ EcoApp România is an educational platform that combines scientific research, AI
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/EcoApp-Romania.git
+git clone https://github.com/bughi04/EcoApp-Romania.git
 cd EcoApp-Romania
 
 # Add your API key
