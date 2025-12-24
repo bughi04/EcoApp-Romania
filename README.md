@@ -1,10 +1,9 @@
 # EcoApp România
 
-A comprehensive desktop application for environmental awareness and pollution reduction in Romania, built with Java Swing and powered by AI.
-
 [![Java](https://img.shields.io/badge/Java-11-orange.svg)](https://www.oracle.com/java/)
 [![Maven](https://img.shields.io/badge/Maven-3.x-blue.svg)](https://maven.apache.org/)
 
+A comprehensive desktop application for environmental awareness and pollution reduction in Romania, built with Java Swing and powered by AI.
 > **Note**: This project was developed with AI assistance as a learning and development tool, alongside traditional programming methods.
 
 ---
