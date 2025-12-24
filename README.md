@@ -4,7 +4,6 @@ A comprehensive desktop application for environmental awareness and pollution re
 
 [![Java](https://img.shields.io/badge/Java-11-orange.svg)](https://www.oracle.com/java/)
 [![Maven](https://img.shields.io/badge/Maven-3.x-blue.svg)](https://maven.apache.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 > **Note**: This project was developed with AI assistance as a learning and development tool, alongside traditional programming methods.
 
