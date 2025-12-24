@@ -94,12 +94,6 @@ java -jar target/combatereapoluariiapp-1.0.0.jar
 
 ---
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## Acknowledgments
 
 - Scientific data from Semantic Scholar, CrossRef, and CORE
