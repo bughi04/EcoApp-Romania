@@ -12,22 +12,7 @@ A sophisticated Java Swing application that combines artificial intelligence, ac
 
 ---
 
-## 📋 Table of Contents
-
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [Technology Stack](#-technology-stack)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Architecture](#-architecture)
-- [API Integration](#-api-integration)
-- [Screenshots](#-screenshots)
-- [Contributing](#-contributing)
-- [License](#-license)
-
----
-
-## 🌟 Overview
+## Overview
 
 **CombatereaPoluariiApp** is an innovative environmental awareness platform designed specifically for the Romanian context. The application integrates cutting-edge AI technology with academic research databases to provide users with:
 
@@ -43,9 +28,9 @@ The application aims to empower Romanian citizens with knowledge and practical t
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🤖 AI-Powered Features
+### AI-Powered Features
 
 #### 1. **Intelligent Q&A Assistant**
 - Specialized AI chatbot for environmental questions
@@ -67,7 +52,7 @@ The application aims to empower Romanian citizens with knowledge and practical t
   - AI-generated condensed summary
   - Key points extraction
 
-### 📚 Academic Research Integration
+### Academic Research Integration
 
 #### 3. **Scientific Article Search**
 - Multi-source academic database integration:
@@ -95,7 +80,7 @@ The application aims to empower Romanian citizens with knowledge and practical t
   - Practical action items
   - Google Scholar links
 
-### 🌱 Environmental Tools
+### Environmental Tools
 
 #### 5. **Carbon Footprint Calculator**
 - Comprehensive CO2 emission calculation based on:
@@ -131,7 +116,7 @@ The application aims to empower Romanian citizens with knowledge and practical t
   - Percentage changes over time
 - AI-generated insights and recommendations
 
-### 📖 Educational Features
+### Educational Features
 
 #### 8. **Environmental Quiz**
 - Three difficulty levels:
@@ -166,16 +151,16 @@ The application aims to empower Romanian citizens with knowledge and practical t
 - Category filtering
 - Visual statistics dashboard
 
-### 💡 Practical Solutions
+### Practical Solutions
 
 #### 10. **Solutions Hub**
 - 50+ practical solutions organized by category:
-  - 🏠 **Home**: Energy efficiency, insulation, recycling
-  - 🚗 **Transportation**: Electric vehicles, public transport, cycling
-  - 🏢 **Office**: Digitalization, energy management, telecommuting
-  - 🌳 **Community**: Tree planting, education, advocacy
-  - 💧 **Water Protection**: Filtration, conservation, pollution prevention
-  - 🌾 **Sustainable Agriculture**: Organic farming, biodiversity
+  - **Home**: Energy efficiency, insulation, recycling
+  - **Transportation**: Electric vehicles, public transport, cycling
+  - **Office**: Digitalization, energy management, telecommuting
+  - **Community**: Tree planting, education, advocacy
+  - **Water Protection**: Filtration, conservation, pollution prevention
+  - **Sustainable Agriculture**: Organic farming, biodiversity
 - Each solution includes:
   - Detailed description with Romanian context
   - Quantified benefits (energy savings, CO2 reduction)
@@ -183,7 +168,7 @@ The application aims to empower Romanian citizens with knowledge and practical t
   - Government incentive programs
   - Implementation steps
 
-### 🎨 User Experience
+### User Experience
 
 #### 11. **Modern UI/UX**
 - **Dual Theme Support**:
@@ -205,7 +190,7 @@ The application aims to empower Romanian citizens with knowledge and practical t
 
 ---
 
-## 🔧 Technology Stack
+## Technology Stack
 
 ### Core Technologies
 - **Java 11** - Modern Java features and stability
@@ -269,7 +254,7 @@ The application aims to empower Romanian citizens with knowledge and practical t
 
 ---
 
-## 📥 Installation
+## Installation
 
 ### Prerequisites
 
@@ -379,7 +364,7 @@ Create an Automator application or use the JAR directly.
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### First Launch
 
@@ -501,562 +486,9 @@ Example questions:
 
 ---
 
-## 🏗️ Architecture
+## Contributing
 
-### Project Structure
-
-```
-combatereapoluariiapp/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   ├── module-info.java
-│       │   └── org/example/combatereapoluariiapp/src/
-│       │       ├── CombatereaPoluariiApp.java      # Main entry point
-│       │       ├── constants/
-│       │       │   └── ThemeConstants.java         # UI colors and themes
-│       │       ├── data/
-│       │       │   └── DataRepository.java         # Static data storage
-│       │       ├── model/
-│       │       │   ├── Article.java                # Article data model
-│       │       │   ├── SearchResult.java           # Search result model
-│       │       │   └── CarbonFootprintCalculator.java  # Calculator logic
-│       │       ├── service/
-│       │       │   ├── AIService.java              # Google Gemini integration
-│       │       │   └── ArticleSearchService.java   # Multi-API search
-│       │       └── ui/
-│       │           ├── MainFrame.java              # Main window
-│       │           ├── UIUtils.java                # Reusable UI components
-│       │           └── panels/
-│       │               ├── HomePanel.java          # Dashboard
-│       │               ├── ArticlesPanel.java      # Basic articles
-│       │               ├── EnhancedArticlesPanel.java  # AI-powered articles
-│       │               ├── SolutionsPanel.java     # Practical solutions
-│       │               ├── ArticleSearchPanel.java # Search interface
-│       │               ├── QAPanel.java            # AI chat
-│       │               ├── CarbonCalculatorPanel.java  # Carbon calc
-│       │               ├── PollutionMapPanel.java  # Air quality map
-│       │               ├── PollutionTrendsPanel.java  # Data charts
-│       │               ├── EcoTipsPanel.java       # Daily tips
-│       │               ├── EnvironmentalQuizPanel.java # Quiz
-│       │               └── AboutPanel.java         # About info
-│       └── resources/
-├── target/                   # Compiled classes and JAR
-├── pom.xml                   # Maven configuration
-├── mvnw                      # Maven wrapper (Unix)
-├── mvnw.cmd                  # Maven wrapper (Windows)
-└── README.md                 # This file
-```
-
-### Design Patterns Used
-
-#### 1. **Model-View-Controller (MVC)**
-- **Model**: `Article`, `SearchResult`, `CarbonResult`
-- **View**: All `*Panel` classes in `ui.panels`
-- **Controller**: `MainFrame`, service classes
-
-#### 2. **Service Layer**
-- `AIService` - Handles all AI interactions
-- `ArticleSearchService` - Manages API calls
-- Isolates business logic from UI
-
-#### 3. **Repository Pattern**
-- `DataRepository` - Centralized data access
-- Static methods for articles and solutions
-- Easy to extend with database later
-
-#### 4. **Factory Pattern**
-- `UIUtils.createStyledButton()` - Button creation
-- `UIUtils.createStatCard()` - Stat card creation
-- Ensures consistent UI elements
-
-#### 5. **Observer Pattern**
-- Event listeners on buttons
-- Combo box listeners for dynamic updates
-- CompletableFuture for async operations
-
-#### 6. **Strategy Pattern**
-- Multiple search strategies (Semantic Scholar, CrossRef, CORE)
-- Fallback mechanisms for API failures
-
-#### 7. **CardLayout Pattern**
-- `MainFrame` uses CardLayout for panel switching
-- Smooth transitions between features
-- Memory-efficient (only active panel rendered)
-
-### Component Relationships
-
-```
-CombatereaPoluariiApp (Main)
-    ↓
-MainFrame (Window Manager)
-    ├── Navigation Bar
-    ├── Theme Toggle
-    └── CardLayout Container
-        ├── HomePanel ──→ DataRepository (stats)
-        ├── EnhancedArticlesPanel ──→ AIService, DataRepository
-        ├── ArticleSearchPanel ──→ ArticleSearchService
-        ├── QAPanel ──→ AIService
-        ├── CarbonCalculatorPanel ──→ CarbonFootprintCalculator
-        ├── PollutionMapPanel ──→ Static city data
-        ├── PollutionTrendsPanel ──→ Generated data + charts
-        ├── EcoTipsPanel ──→ Static tips database
-        ├── EnvironmentalQuizPanel ──→ Static questions
-        └── SolutionsPanel ──→ DataRepository
-
-Services:
-    AIService
-        ├── Google Gemini API
-        ├── HTTP requests
-        └── JSON parsing
-
-    ArticleSearchService
-        ├── Semantic Scholar API
-        ├── CrossRef API
-        ├── CORE API
-        └── Result aggregation
-```
-
-### Data Flow
-
-#### AI Q&A Flow
-```
-User Question → QAPanel → AIService → Gemini API → JSON Response 
-    → Parse & Format → Update UI → Display Answer
-```
-
-#### Article Search Flow
-```
-Search Query → ArticleSearchPanel → ArticleSearchService
-    ├── Semantic Scholar API ┐
-    ├── CrossRef API         ├→ Aggregate Results → Remove Duplicates
-    └── CORE API             ┘     → Sort by Relevance → Display
-```
-
-#### Carbon Calculation Flow
-```
-User Input → CarbonCalculatorPanel → CarbonFootprintCalculator
-    ├── Transport Emissions (kg CO2)
-    ├── Energy Emissions (kg CO2)
-    └── Lifestyle Emissions (kg CO2)
-        → Sum Total → Compare to Average → Generate Recommendations
-```
-
-### Threading Model
-
-- **Main Thread**: UI rendering and event handling
-- **CompletableFuture**: Async operations for:
-  - AI API calls (prevents UI freezing)
-  - Article searches (parallel API requests)
-  - Heavy calculations
-- **SwingUtilities.invokeLater()**: Safe UI updates from background threads
-
-### Error Handling Strategy
-
-1. **Network Errors**: Graceful fallbacks, retry mechanisms
-2. **API Errors**: Display user-friendly messages, use cached data
-3. **Invalid Input**: Validation with helpful error messages
-4. **Missing API Keys**: Clear instructions for configuration
-
----
-
-## 🔌 API Integration
-
-### Google Gemini API
-
-#### Configuration
-```java
-// In AIService.java
-private static final String API_URL = 
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent";
-private static final String API_KEY = "YOUR_API_KEY_HERE";
-```
-
-#### Features Used
-- **Natural Language Understanding**: Context-aware environmental queries
-- **Romanian Language Support**: Fluent responses in Romanian
-- **Specialized Prompting**: Environmental expert persona
-- **Content Safety**: Built-in filtering for appropriate responses
-
-#### Request Format
-```json
-{
-  "contents": [{
-    "parts": [{
-      "text": "Customized prompt + user question"
-    }]
-  }],
-  "generationConfig": {
-    "temperature": 0.7,
-    "topK": 40,
-    "topP": 0.95,
-    "maxOutputTokens": 1024
-  },
-  "safetySettings": [...]
-}
-```
-
-#### Rate Limits
-- Free tier: 60 requests per minute
-- Application implements request queuing
-- Fallback responses for quota exceeded
-
-### Semantic Scholar API
-
-#### Endpoint
-```
-https://api.semanticscholar.org/graph/v1/paper/search
-```
-
-#### Features
-- Open access to 200M+ papers
-- Author information and citations
-- Abstracts and publication venues
-- No API key required (public access)
-
-#### Query Parameters
-```
-?query=<search_terms>
-&limit=10
-&fields=title,authors,year,abstract,url,venue
-```
-
-### CrossRef API
-
-#### Endpoint
-```
-https://api.crossref.org/works
-```
-
-#### Features
-- DOI-based paper lookup
-- Publication metadata
-- Citation information
-- Journal details
-
-#### Query Format
-```
-?query=<search_terms>
-&rows=8
-&sort=relevance
-&order=desc
-```
-
-#### Best Practices
-- Include User-Agent header
-- Respect rate limits (50 requests/second)
-- Use descriptive queries
-
-### CORE API
-
-#### Endpoint
-```
-https://api.core.ac.uk/v3/search/works
-```
-
-#### Features
-- Open access research papers
-- Full-text search
-- Download links
-- Metadata extraction
-
-#### Query Format
-```
-?q=<search_terms>
-&limit=5
-```
-
-### API Error Handling
-
-All API integrations include:
-
-1. **Timeout Handling**: 10-15 second timeouts
-2. **Retry Logic**: Up to 3 retries with exponential backoff
-3. **Fallback Data**: Curated content when APIs unavailable
-4. **User Feedback**: Loading states and error messages
-5. **Logging**: Detailed logs for debugging
-
----
-
-## 📸 Screenshots
-
-### Main Dashboard
-*Home screen showing environmental statistics and call-to-action*
-
-**Light Mode:**
-- Clean, modern interface
-- Vibrant colors and gradients
-- Easy-to-read text
-
-**Dark Mode:**
-- Reduced eye strain
-- Professional appearance
-- Energy efficient for OLED screens
-
-### Carbon Footprint Calculator
-*Interactive calculator with real-time results*
-
-Features shown:
-- Input form for transportation, energy, and lifestyle
-- Visual breakdown by category
-- Comparison with national average
-- Personalized recommendations
-
-### Pollution Map
-*Interactive map of Romania showing air quality*
-
-Elements visible:
-- City markers color-coded by AQI
-- Detailed pollutant measurements
-- Health recommendations
-- Legend explaining air quality levels
-
-### AI Chat Interface
-*Conversational AI assistant for environmental questions*
-
-Displays:
-- Chat history with user and AI messages
-- Contextual suggestions
-- Romanian-language responses
-- Formatted answers with bullet points
-
-### Academic Search
-*Multi-database article search interface*
-
-Shows:
-- Search bar with filters
-- Results with abstracts
-- Source badges (Semantic Scholar, CrossRef, CORE)
-- Direct links to papers
-
-### Environmental Quiz
-*Interactive quiz with multiple difficulty levels*
-
-Includes:
-- Progress bar
-- Multiple choice questions
-- Immediate feedback
-- Final score and recommendations
-
-### Daily Eco-Tips
-*Practical daily tips for sustainable living*
-
-Features:
-- Large tip display with icon
-- Category badges
-- Quick stats (money saved, CO2 reduced)
-- Navigation between tips
-
-### Pollution Trends
-*Data visualization showing pollution over time*
-
-Components:
-- Interactive line chart
-- Customizable parameters
-- Statistical analysis
-- AI-generated insights
-
----
-
-## 🤝 Contributing
-
-We welcome contributions from the community! Here's how you can help:
-
-### Ways to Contribute
-
-1. **Report Bugs**: Open an issue with details and reproduction steps
-2. **Suggest Features**: Propose new environmental features or improvements
-3. **Translate**: Help translate to other languages
-4. **Improve Documentation**: Fix typos, add examples, clarify instructions
-5. **Write Code**: Submit pull requests for new features or bug fixes
-
-### Development Setup
-
-1. Fork the repository
-2. Create a feature branch:
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. Make your changes
-4. Run tests:
-   ```bash
-   mvn test
-   ```
-5. Commit with clear messages:
-   ```bash
-   git commit -m "Add AmazingFeature: description"
-   ```
-6. Push to your fork:
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-7. Open a Pull Request
-
-### Code Style Guidelines
-
-- **Java Naming**:
-  - Classes: `PascalCase`
-  - Methods: `camelCase`
-  - Constants: `UPPER_SNAKE_CASE`
-- **Indentation**: 4 spaces
-- **Comments**: JavaDoc for public methods
-- **Max Line Length**: 120 characters
-
-### Adding New Features
-
-When adding new panels or features:
-
-1. Create new panel class in `ui.panels`
-2. Register in `MainFrame.initializeUI()`
-3. Add navigation button if needed
-4. Update this README
-
-### Testing
-
-- Write unit tests for business logic
-- Test UI manually in both light/dark modes
-- Verify API integrations with mock data
-- Check cross-platform compatibility
-
----
-
-## 📝 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-### MIT License Summary
-
-- ✅ Commercial use
-- ✅ Modification
-- ✅ Distribution
-- ✅ Private use
-- ❌ Liability
-- ❌ Warranty
-
----
-
-## 🙏 Acknowledgments
-
-### APIs and Services
-- **Google Gemini** - AI-powered environmental assistance
-- **Semantic Scholar** - Academic paper search
-- **CrossRef** - DOI and citation data
-- **CORE** - Open access research papers
-
-### Inspiration
-- Romanian environmental NGOs and activists
-- European Union Green Deal initiatives
-- UN Sustainable Development Goals
-- Paris Agreement climate targets
-
-### Data Sources
-- Romanian Environmental Protection Agency
-- European Environment Agency
-- World Health Organization air quality guidelines
-- Romanian Government environmental programs
-
----
-
-## 📞 Contact & Support
-
-### Project Maintainer
-- **GitHub**: [yourusername](https://github.com/yourusername)
-- **Email**: your.email@example.com
-
-### Getting Help
-
-1. **Documentation**: Read this README thoroughly
-2. **Issues**: Check [existing issues](https://github.com/yourusername/CombatereaPoluariiApp/issues)
-3. **Discussions**: Join our [GitHub Discussions](https://github.com/yourusername/CombatereaPoluariiApp/discussions)
-4. **Email**: Contact the maintainer for private inquiries
-
-### Reporting Security Issues
-
-If you discover a security vulnerability, please email privately to:
-**security@example.com**
-
-Do NOT open a public issue for security concerns.
-
----
-
-## 🗺️ Roadmap
-
-### Version 2.0 (Planned)
-
-- [ ] **Database Integration**: PostgreSQL for user data persistence
-- [ ] **User Accounts**: Save calculations, quiz progress, bookmarks
-- [ ] **Mobile App**: React Native version for Android/iOS
-- [ ] **Web Version**: Browser-based application
-- [ ] **Real-time Data**: Live pollution sensors via IoT integration
-- [ ] **Social Features**: Share achievements, create groups
-- [ ] **Gamification**: Points, badges, leaderboards
-- [ ] **Multi-language**: English, Hungarian, German translations
-
-### Version 2.1 (Future)
-
-- [ ] **Machine Learning**: Predict pollution trends
-- [ ] **Push Notifications**: Air quality alerts
-- [ ] **Augmented Reality**: AR pollution visualization
-- [ ] **Blockchain**: Carbon credit tracking
-- [ ] **API for Developers**: Open API for third-party apps
-
----
-
-## 📊 Project Statistics
-
-- **Lines of Code**: ~8,500
-- **Number of Classes**: 25+
-- **Features**: 12 major features
-- **API Integrations**: 4 external services
-- **Panels**: 11 interactive panels
-- **Quiz Questions**: 25+ with 3 difficulty levels
-- **Eco-Tips**: 25+ practical tips
-- **Solutions**: 50+ categorized solutions
-- **Cities Covered**: 10 Romanian cities
-- **Pollutants Tracked**: 6 types (PM2.5, PM10, NO2, SO2, CO, O3)
-
----
-
-## 🌍 Environmental Impact
-
-By using this application, users can:
-
-- **Learn** about environmental issues affecting Romania
-- **Calculate** and reduce their personal carbon footprint
-- **Discover** practical solutions for sustainable living
-- **Access** cutting-edge environmental research
-- **Track** pollution trends in their city
-- **Educate** themselves through interactive quizzes
-- **Implement** daily eco-friendly practices
-- **Contribute** to Romania's climate goals
-
-**Estimated Impact**: If 10,000 users each reduce their carbon footprint by just 10%, that's a collective reduction of **450 tons of CO2 per year** - equivalent to planting **20,000 trees**!
-
----
-
-## 🎯 Goals and Vision
-
-### Mission
-To empower Romanian citizens with knowledge, tools, and practical solutions to combat pollution and contribute to a sustainable future.
-
-### Vision
-A Romania where every citizen is aware of their environmental impact and actively participates in pollution reduction through informed decisions and sustainable practices.
-
-### Values
-- **Education First**: Knowledge is power
-- **Science-Based**: Relying on research and data
-- **Action-Oriented**: Practical, implementable solutions
-- **Accessible**: Free and open to all
-- **Romanian Context**: Tailored to local needs and programs
-
----
-
-<div align="center">
-
-**Made with 💚 for the environment and 🇷🇴 Romania**
-
-[![Star this repo](https://img.shields.io/github/stars/yourusername/CombatereaPoluariiApp?style=social)](https://github.com/yourusername/CombatereaPoluariiApp)
-[![Follow on GitHub](https://img.shields.io/github/followers/yourusername?style=social)](https://github.com/yourusername)
+We welcome contributions from the community!
 
 *Together, we can make a difference! 🌱*
 
