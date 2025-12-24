@@ -6,7 +6,7 @@
 [![UI Framework](https://img.shields.io/badge/UI-Swing-brightgreen.svg)](https://docs.oracle.com/javase/tutorial/uiswing/)
 [![AI Powered](https://img.shields.io/badge/AI-Google%20Gemini-purple.svg)](https://ai.google.dev/)
 
-> **Comprehensive Environmental Platform for Pollution Awareness and Mitigation in Romania**
+> **Comprehensive Environmental Platform for Pollution Awareness and Mitigation in Romania, made by me and my colleague David Rusu**
 
 A sophisticated Java Swing application that combines artificial intelligence, academic research, and interactive visualizations to educate users about environmental protection and provide practical solutions for reducing pollution in Romania.
 
