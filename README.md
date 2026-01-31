@@ -3,7 +3,7 @@
 [![Java](https://img.shields.io/badge/Java-11-orange.svg)](https://www.oracle.com/java/)
 [![Maven](https://img.shields.io/badge/Maven-3.x-blue.svg)](https://maven.apache.org/)
 
-A comprehensive desktop application for environmental awareness and pollution reduction in Romania, built with Java Swing and powered by AI, made together with my colleague david21-rs
+A comprehensive desktop application for environmental awareness and pollution reduction in Romania, built with Java Swing and powered by AI, made together with my colleague [david21-rs](https://github.com/david21-rs)
 > **Note**: This project was designed and implemented by me, with selective use of AI tools for research, refactoring, and productivity - similar to modern IDE assistance.
 
 ---
